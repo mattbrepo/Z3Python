@@ -11,11 +11,7 @@ I wanted to test Microsoft Z3 Theorem Prover.
 ## Example
 A friend of mine is a teacher in a school for kids from 10 to 13 years old. He presented to me a math problem that was quite difficult for his students:
 
-```
-  3     x     y
- --- - --- = ---
-  2     3     4
-```
+$$ \frac{3}{2} - \frac{x}{3} = \frac{y}{4} $$
 
 He wanted them to apply a bit of intuition to find at least one solution assuming x and y to be integer greater than or equal to zero. 
 
