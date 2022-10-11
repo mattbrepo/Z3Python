@@ -1,21 +1,18 @@
 # Z3Python
-Test of [Z3 Theorem Prover](https://en.wikipedia.org/wiki/Z3_Theorem_Prover) with Python
+Test of [Z3 Theorem Prover](https://en.wikipedia.org/wiki/Z3_Theorem_Prover) with Python.
 
 **Language: Python**
 
 **Start: 2021**
 
 ## Why
-I wanted to test Microsoft Z3 Theorem Prover.
-
-## Example
-A friend of mine is a teacher in a school for kids from 10 to 13 years old. He presented to me a math problem that was quite difficult for his students:
+I wanted to test Microsoft Z3 Theorem Prover. I found the perfect case when a friend of mine, who is a teacher in a school for kids from 10 to 13 years old, presented to me a math problem that was quite difficult for his students:
 
 $$ \frac{3}{2} - \frac{x}{3} = \frac{y}{4} $$
 
 He wanted them to apply a bit of intuition to find at least one solution assuming x and y to be integer greater than or equal to zero. 
 
-I tried and I quickly found a solution. Later using Z3, I found out that there are two solutions:
+I tried and I quickly found a solution. Later using Z3, I found out that there are two possible solutions:
 
 ```python
 x, y = Ints('x y')
