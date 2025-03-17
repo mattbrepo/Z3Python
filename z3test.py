@@ -1,5 +1,7 @@
+# %%
 from z3 import *  # pip install z3-solver
 
+# %%
 # problem from a math teacher
 #
 #    3     x     y
@@ -13,6 +15,7 @@ while s.check() == sat:
   print(s.model())
   s.add(Or(x != s.model()[x], y != s.model()[y])) # find a new solution
 
+# %%
 # problem from a scientific paper I was dealing with
 #
 # (3-h)(2-h) + R = 4
@@ -27,10 +30,10 @@ while s.check() == sat:
   print(s.model())
   s.add(Or(h != s.model()[h], R != s.model()[R])) # find a new solution
 
+# %%
 #
 # Examples from https://ericpony.github.io/z3py-tutorial/guide-examples.htm
 #
-
 # find one solution
 x, y, z = Ints('x y z')
 s = Solver()
@@ -66,3 +69,12 @@ print("z = %s" % m[z])
 #s.add(2**x == 3)
 #print(s.check()) # cannot solve non-polynomial (but there are workarounds...check website)
 
+# %%
+# problem from a problem I was dealing with
+#
+x, y = Reals('x y')
+s = Solver()
+s.add(x ** 2 + y ** 2 - (2 * ((x + y) / 2) ** 2) < 0)
+while s.check() == sat:
+  print(s.model())
+  s.add(Or(x != s.model()[x], y != s.model()[y])) # find a new solution
